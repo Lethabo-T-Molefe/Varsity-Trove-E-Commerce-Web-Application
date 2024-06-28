@@ -1,0 +1,173 @@
+@font-face {
+    font-family: 'SoccerLeague';
+    src: url('/assets/SoccerLeagueCollege.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.navbar {
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    position:fixed;
+    background-color: dimgrey;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-family: 'SoccerLeague', sans-serif;
+    color: white;
+    font-size: 50px;
+    font-weight: 1;
+    margin-right: 16px;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.info-page{
+
+
+        font-family: Arial, sans-serif;
+        margin-top: 70px;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+
+
+    header {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+    header nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+    }
+    
+    header nav a:hover {
+        text-decoration: underline;
+    }
+    
+    .container {
+        display: flex;
+        flex: 1;
+        padding: 20px;
+        gap: 20px;
+        background-image: url(../assets/LoginBackground3.png);
+        background-size: cover;
+    }
+    
+    .column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    section {
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.719);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    section h2 {
+        font-family: 'SoccerLeague', sans-serif;
+        font-weight: 1;
+        font-size: 35px;
+        color: #8623c7ef;
+    }
+    
+    section p {
+        line-height: 1.6;
+    }
+    
+    #products ul, #entrepreneurs ul, #contact ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    #products li, #entrepreneurs li, #contact li {
+        margin: 10px 0;
+    }
+    
+    #contact a {
+        color: #4CAF50;
+        text-decoration: none;
+    }
+    
+    #contact a:hover {
+        text-decoration: underline;
+    }
+    
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start; // Align items at the top
+        flex-wrap: wrap; // Allow items to wrap if necessary
+        padding: 20px;
+        background-color: #333;
+        color: white;
+        margin-top: auto;
+    }
+    
+    footer section {
+        padding: 20px;
+        background-color: rgba(105, 47, 153, 0.295);
+        flex: 1;
+    }
+    
+    footer section#contact-us {
+        margin-left: 20px;
+    }
+    
+    .last {
+        align-self: flex-end; // Align at the bottom
+        text-align: center;
+        width: 100%; // Ensure full width
+    }
+    
+    footer ul li a i {
+        color: #333; // Change color as needed
+        font-size: 20px; // Change font size as needed
+        margin-right: 5px; // Adjust spacing as needed
+    }
+}
+
+button {
+    color: white;
+    text-transform: uppercase;
+    margin-left: 8px;
+}
+
+button.active {
+    font-weight: 600;
+}
+
+.custom-toolbar {
+    background-color: #ff0000;
+}
+
+body::before {
+    content: 'Varsity Trove';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'SoccerLeague', sans-serif;
+    font-size: 5rem; // Adjust the size as needed
+    color: rgba(0, 0, 0, 0.1); // Light and semi-transparent color
+    z-index: -1; // Ensure it stays behind other content
+    white-space: nowrap; // Prevents the text from wrapping
+    pointer-events: none; // Ensure the watermark does not interfere with user interaction
+
+  }

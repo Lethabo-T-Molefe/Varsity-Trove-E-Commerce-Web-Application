@@ -1,0 +1,107 @@
+<div  class="landing-page">
+    <mat-toolbar color="primary" class="navbar">
+        <span class="navbar-brand">Varsity Trove</span>
+        <span class="spacer"></span>
+        <button mat-button routerLink="/order" routerLinkActive="active">Track Order</button>
+        <button mat-button routerLink="/register" routerLinkActive="active">Register</button>
+        <button mat-button routerLink="/login" routerLinkActive="active">Login</button>
+    </mat-toolbar>
+    <div *ngIf="showLandingPage && !isCustomerLoggedIn && !isAdminLoggedIn" class="info-page">
+            
+        <div class="container">
+            <div class="column">
+                <section id="welcome">
+                    <h2>Welcome to Varsity Trove!</h2>
+                    <p>Your one-stop marketplace where university students can buy and sell products from each other. Whether you're looking to buy textbooks, electronics, or dorm essentials, or sell items you no longer need, Varsity Trove connects you with your campus community.</p>
+                </section>
+
+                <section id="about">
+                    <h2>About Us</h2>
+                    <p>Varsity Trove was created with the vision of fostering a community where students can support each other by buying and selling items within their university. Our platform makes it easy to list items for sale and find great deals on items you need, all while connecting with your peers.</p>
+                </section>
+            </div>
+
+            <div class="column">
+                <section id="products">
+                    <h2>What Products Can You Sell?</h2>
+                    <p>As a student, you can sell all types of products that are legal, including but not limited to:</p>
+                    <ul>
+                        <li>Textbooks and study materials</li>
+                        <li>Electronics such as laptops, tablets, and phones</li>
+                        <li>Clothing and accessories</li>
+                        <li>Dorm and apartment furniture</li>
+                        <li>Food and beverages (non-perishable items)</li>
+                        <li>Sports and fitness equipment</li>
+                        <li>Stationery and office supplies</li>
+                    </ul>
+                </section>
+
+                <section id="entrepreneurs">
+                    <h2>For Student Entrepreneurs</h2>
+                    <p>If you are an aspiring student entrepreneur, Varsity Trove is the perfect platform to start your business journey. You can showcase and sell your own products, such as:</p>
+                    <ul>
+                        <li>Handmade crafts and artwork</li>
+                        <li>Customized apparel and merchandise</li>
+                        <li>Homemade food and baked goods (subject to local health regulations)</li>
+                        <li>Personalized gifts and souvenirs</li>
+                        <li>Innovative tech gadgets and accessories</li>
+                    </ul>
+                    <p>Leverage our platform to reach a targeted audience and grow your business within your university community.</p>
+                </section>
+            </div>
+        </div>
+         
+        <footer>
+            <section id="contact">
+                <h2>Contact & Follow Us</h2>
+                <p>Stay connected with us on social media and keep up to date with the latest news and offers.</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/VarsityTrove" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://www.twitter.com/VarsityTrove" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.instagram.com/VarsityTrove" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/company/VarsityTrove" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                </ul>
+            </section>
+            
+            <section id="contact-us">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or inquiries, feel free to reach out to us:</p>
+                <ul>
+                    <li>Email: info@varsitytrove.com</li>
+                    <li>Phone: (+27)71-456-7890</li>
+                </ul>
+        </section>
+        <p class="last">&copy; 2024 Varsity Trove. All rights reserved.</p>
+        </footer>
+    </div>
+</div>
+<div *ngIf="isAdminLoggedIn">
+    <mat-toolbar color="primary" class="navbar">
+        <span class="navbar-brand">Varsity Trove</span>
+        <span class="spacer"></span>
+        <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</button>
+        <button mat-button routerLink="/admin/analytics" routerLinkActive="active">Analytics</button>
+        <button mat-button routerLink="/admin/category" routerLinkActive="active">Category</button>
+        <button mat-button routerLink="/admin/product" routerLinkActive="active">Product</button>
+        <button mat-button routerLink="/admin/orders" routerLinkActive="active">Orders</button>
+        <button mat-button routerLink="/admin/post-coupon" routerLinkActive="active">Post Coupon</button>
+        <button mat-button routerLink="/admin/coupons" routerLinkActive="active">Coupons</button>
+        <button mat-button routerLinkActive="active" (click)="logout()">Logout</button>
+
+    </mat-toolbar>
+    
+</div>
+<div *ngIf="isCustomerLoggedIn">
+    <mat-toolbar color="primary" class="navbar signup">
+        <span class="navbar-brand">Varsity Trove</span>
+        <span class="spacer"></span>
+        <button mat-button routerLink="/customer/dashboard" routerLinkActive="active">Dashboard</button>
+        <button mat-button routerLink="/customer/cart" routerLinkActive="active">Cart</button>
+        <button mat-button routerLink="/customer/my_orders" routerLinkActive="active">Orders</button>
+        <button mat-button routerLink="/customer/wishlist" routerLinkActive="active">Wishlist</button>
+        <button mat-button routerLink="/customer/profile" routerLinkActive="active">Profile</button>
+        <button mat-button routerLinkActive="active" (click)="logout()">Logout</button>
+    </mat-toolbar>
+    
+</div>
+<router-outlet></router-outlet>
